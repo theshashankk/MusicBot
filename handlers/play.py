@@ -19,12 +19,12 @@ from helpers.errors import DurationLimitError
 async def play(client: Client, message_: Message):
     audio = (message_.reply_to_message.audio or message_.reply_to_message.voice) if message_.reply_to_message else None
 
-    res = await message_.reply_text("ĆĦ€€ΜŞβØŦ=🔄 Processing...")
+    res = await message_.reply_text("NᴜʙIsʜɪᴋᴀ=🔄 Pʀᴏᴄᴇssɪɴɢ...")
 
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"ĆĦ€€ΜŞβØŦ=Videos longer than {DURATION_LIMIT} minute(s) aren't allowed, the provided video is {audio.duration / 60} minute(s)"
+                f"NᴜʙIsʜɪᴋᴀ=Vɪᴅᴇᴏ ɪs ʟᴏɴɢᴇʀ ᴛʜᴀɴ{DURATION_LIMIT} ᴍɪɴᴜᴛᴇ(s) Aʀᴇɴ'ᴛ Aʟʟᴏᴡᴇᴅ, Tʜᴇ Pʀᴏᴠɪᴅᴇʀ ᴠɪᴅᴇᴏ ɪs {audio.duration / 60} Mɪɴᴜᴛᴇ(s)"
             )
 
         file_name = audio.file_id + audio.file_name.split(".")[-1]
@@ -50,7 +50,7 @@ async def play(client: Client, message_: Message):
                         break
 
         if offset == None:
-            await res.edit_text("ĆĦ€€ΜŞβØŦ=❕ You did not give me anything to play.")
+            await res.edit_text("NᴜʙIsʜɪᴋᴀ=❕ Yᴏᴜ Dɪᴅ ɴᴏᴛ ɢɪᴠᴇ ᴍᴇ ᴀɴʏᴛʜɪɴɢ ᴛᴏ ᴘʟᴀʏ.")
             return
 
         url = text[offset:offset+length]
@@ -64,7 +64,7 @@ async def play(client: Client, message_: Message):
 
     if is_playing:
         position = await sira.add(message_.chat.id, file_path)
-        await res.edit_text(f"ĆĦ€€ΜŞβØŦ=#️⃣ Queued at position {position}.")
+        await res.edit_text(f"NᴜʙIsʜɪᴋᴀ=#️⃣ Qᴜᴇᴜᴇᴅ ᴀᴛ ᴘᴏsɪᴛɪᴏɴ {position}.")
     else:
-        await res.edit_text("ĆĦ€€ΜŞβØŦ=▶️ Playing...")
+        await res.edit_text("NᴜʙIsʜɪᴋᴀ=▶️ Pʟᴀʏɪɴɢ...")
         tgcalls.pytgcalls.join_group_call(message_.chat.id, file_path, 48000)
