@@ -26,7 +26,7 @@ Use the buttons below to know more about me.""",
                         "💬 Group", url="https://t.me/Marshmellosupport"
                     ),
                     InlineKeyboardButton(
-                        "Channel 🔈", url="https://t.me/CheemsUerbot"
+                        "Channel 🔈", url="https://t.me/Marshmellosupport"
                     )
                 ]
             ]
