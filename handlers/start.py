@@ -10,23 +10,26 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>👋🏻 Hi {message.from_user.first_name}!</b>
-
-Hᴇʏ Nᴜʙ ɪ'ᴍ Nᴜʙ Isʜɪᴋᴀ Mᴜsɪᴄ ᴘʟᴀʏᴇʀ, Aɴ ᴏᴘᴇɴ-sᴏᴜʀᴄᴇ ʙᴏᴛ ᴛʜᴀᴛ ʟᴇᴛs ʏᴏᴜ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ʏᴏᴜʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ.
-
-Use the buttons below to know more about me.""",
+Hello, !!
+Nice To Meet You 🤗 !!
+I guess, that you know me, Uhh you don't, np..
+Well I'm Mᴜsɪᴄ Bᴏᴛ.
+A Pᴏᴡᴇʀғᴜʟ Mᴜsɪᴄ ᴀssɪᴛᴀɴᴛ ᴏғ [Tʜᴇ Sʜᴀsʜᴀɴᴋ⚡️](t.me/theshashank)
+                           Pᴏᴡᴇʀᴇᴅ Bʏ [Wʜɪᴛᴇ Dᴇᴠɪʟ](t.me/Whitedevil_support)
+I ᴄᴀɴ sᴛʀᴇᴀᴍ ᴍᴜsɪᴄ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ 😊😊.""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⚒COMMANDS", url="https://telegra.ph/MusicBot-Robot-MusicBot-Robo-03-14"
+                        "⚒COMMANDS", url="https://telegra.ph/Music-Bot-04-06"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/Marshmellosupport"
+                        "My sweet creator ☺️", url="https://t.me/theshashank"
                     ),
                     InlineKeyboardButton(
-                        "Channel 🔈", url="https://t.me/Marshmellosupport"
+                        "creator ki jaan🤭", url="https://t.me/cutie1145"
                     )
                 ]
             ]
